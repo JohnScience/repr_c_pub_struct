@@ -1,0 +1,44 @@
+[package]
+name = "repr_c_pub_struct"
+version = "0.1.0"
+authors = ["Dmitrii Demenev <demenev.dmitriy1@gmail.com>"]
+edition = "2021"
+rust-version = "1.56.1" # https://github.com/foresterre/cargo-msrv
+description = "A library for extracting `#[repr(C)] pub struct`ures."
+documentation = "https://docs.rs/repr_c_pub_struct"
+readme = "README.md"
+repository = "https://github.com/JohnScience/repr_c_pub_struct"
+license = "MIT OR Apache-2.0"
+# license-file | not needed
+keywords = ["parsing", "syn", "repr", "C"]
+categories = ["development-tools::procedural-macro-helpers"]
+# workspace | not needed
+# build | not needed
+# links | not needed
+# exclude | not needed
+include = [
+    "/Cargo.toml",
+    "/LICENSE_APACHE",
+    "/LICENSE_MIT",
+    "/README.md",
+    "/src/lib.rs",
+    "/tests/**",
+]
+# publish | not needed
+# metadata | not needed
+# default-run | not needed
+autobins = false
+autoexamples = false
+autotests = false
+autobenches = false
+# resolver | not needed
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+syn = { version="1.0.83", features=["full", "visit", "extra-traits"] }
+proc-macro2 = { version="1.0.34", features= ["span-locations"] }
+walkdir = "2.3.2"
+serde = { version="1.0.132", features=["derive"] }
+parenthesized_c = "0.1.0"

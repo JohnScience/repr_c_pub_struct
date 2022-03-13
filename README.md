@@ -1,7 +1,7 @@
 # A library for extracting `#[repr(C)] pub struct`ures
 
 In order to expose a struct with stable ABI for interoperability with other programming languages,
-Rust developers should use #\[repr(C)\] attribute.
+Rust developers should use `#[repr(C)]` attribute.
 
 ```rust
 #[repr(C)]
